@@ -2,12 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartListComponent } from './chart-list/chart-list.component';
 
+import { IgniteUIModule } from 'igniteui-angular-wrappers';
+
+import { IgxCardModule } from 'igniteui-js-blocks/main';
+
+
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    IgxCardModule,
+    IgniteUIModule
   ],
   exports: [
-    ChartListComponent
+    ChartListComponent,
+    IgxCardModule,
+    IgniteUIModule,
   ],
   declarations: [ChartListComponent]
 })

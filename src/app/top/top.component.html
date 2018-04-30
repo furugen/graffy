@@ -1,13 +1,30 @@
-<app-chart-list></app-chart-list>
 <div class="container">
+
+
   <h3>①グラフを選びましょう</h3>
-  <p>まずは、あなたのサイトに配置したいグラフを選びましょう！</p>
+  <app-chart-list></app-chart-list>
 
   <h3>②簡単な設定をしましょう</h3>
-  <p>タイトルを設定してみましょう、後から変更可能ですのでまずはお試し！</p>
+<igx-input-group>
+  <input igxInput name="fullName" type="text" />
+  <label igxLabel for="fullName">グラフ タイトル</label>
+</igx-input-group>
+
+<igx-input-group>
+  <input igxInput name="virtucalTitle" type="text" />
+  <label igxLabel for="virtucalTitle">縦軸のラベル名</label>
+</igx-input-group>
+
+<igx-input-group>
+  <input igxInput name="horizonTitle" type="text" />
+  <label igxLabel for="horizonTitle">横軸のラベル名</label>
+</igx-input-group>
 
   <h3>③あなたのサイトに表示しましょう</h3>
   <p>下記のURLをあなたのサイトの表示したい場所に記載しましょう。</p>
+  <div>
+     https://www.google.co.jp/search?q=html5+%E5%80%8D%E7%8E%87&oq=html5+%E5%80%8D%E7%8E%87&aqs=chrome..69i57j0.12121j0j7&sourceid=chrome&ie=UTF-8
+  </div>
 
   <h3>表示ができたらカスタマイズを！</h3>
   <p>あなたのサイトにグラフの表示は出来ましたか？ さっそくグラフのデータの設定などをカスタマイズしていきましょう！ わからない点があれば、こちらからお気軽にお問い合わせください。

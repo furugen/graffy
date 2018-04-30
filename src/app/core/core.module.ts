@@ -4,15 +4,18 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { IgxInputGroupModule } from 'igniteui-angular/main';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    IgxInputGroupModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    IgxInputGroupModule
   ],
   declarations: [HeaderComponent, FooterComponent]
 })

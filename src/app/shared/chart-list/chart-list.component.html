@@ -1,3 +1,12 @@
-<p>
-  chart-list works!
-</p>
+<!-- <ig-grid [widgetId]="id" [options]="gridOptions"></ig-grid> -->
+
+
+<div class="row">
+  <div class="col-md-3" *ngFor="let title of chartTitles">
+    <igx-card>
+      <igx-card-content>
+        <ig-data-chart [(options)]="chartOptions" class="dataChart"></ig-data-chart>
+      </igx-card-content>
+    </igx-card>
+  </div>
+</div>
