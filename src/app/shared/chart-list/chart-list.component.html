@@ -2,10 +2,10 @@
 
 
 <div class="row">
-  <div class="col-md-3" *ngFor="let title of chartTitles">
+  <div class="col-md-3" *ngFor="let chart of charts">
     <igx-card>
       <igx-card-content>
-        <ig-data-chart [(options)]="chartOptions" class="dataChart"></ig-data-chart>
+        <ig-data-chart [(options)]="chart.chartOptions" class="dataChart"></ig-data-chart>
       </igx-card-content>
     </igx-card>
   </div>
