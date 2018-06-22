@@ -1,3 +1,4 @@
+import { Output, EventEmitter } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { ChartData } from "./chart-data";
 
@@ -9,7 +10,10 @@ import { ChartData } from "./chart-data";
 export class ChartListComponent implements OnInit {
   private data: any;
   charts: ChartData[];
+  selectChart: ChartData;
   title: string;
+
+  @Output() selectChangedEvent = new EventEmitter<ChartData>();
 
   constructor() {
     this.title = "備品";
@@ -52,21 +56,25 @@ export class ChartListComponent implements OnInit {
     ];
 
     this.charts = new Array();
-    this.charts.push(this.createChartData("A", "area"));
-    this.charts.push(this.createChartData("A", "column"));
     this.charts.push(this.createChartData("A", "line"));
-    this.charts.push(this.createChartData("A", "splineArea"));
-    this.charts.push(this.createChartData("A", "stackedLine"));
-    this.charts.push(this.createChartData("A", "spline"));
-    this.charts.push(this.createChartData("A", "stepArea"));
-    this.charts.push(this.createChartData("A", "stepLine"));
-    this.charts.push(this.createChartData("A", "waterfall"));
+    this.charts.push(this.createChartData("A", "column"));
     this.charts.push(this.createChartData("A", "point"));
+    this.charts.push(this.createChartData("A", "area"));
+    this.charts.push(this.createChartData("A", "spline"));
+    this.charts.push(this.createChartData("A", "splineArea"));
+    this.charts.push(this.createChartData("A", "stepLine"));
+    this.charts.push(this.createChartData("A", "stepArea"));
+  }
+
+  onSelect(chart: ChartData): void {
+    this.selectChart = chart;
+    this.selectChangedEvent.emit(this.selectChart);
   }
 
   createChartData(title: string, chartType: string): ChartData {
     const chartData = new ChartData({
       title: title,
+      chartType: chartType,
       chartOptions: this.createChartOption(title, chartType)
     });
 
@@ -80,12 +88,23 @@ export class ChartListComponent implements OnInit {
     }
 
     const chartOptions = {
-      width: "200",
-      height: "200",
+      width: "120px",
+      height: "120px",
       dataSource: this.data,
+      leftMargin: 10,
       axes: [
-        { name: "NameAxis", type: "categoryX", label: "CountryName" },
-        { name: "PopulationAxis", type: "numericY", minimumvalue: 0 }
+        {
+          name: "NameAxis",
+          type: "categoryX",
+          label: "CountryName",
+          labelVisibility: "collapsed"
+        },
+        {
+          name: "PopulationAxis",
+          type: "numericY",
+          minimumvalue: 0,
+          labelVisibility: "collapsed"
+        }
       ],
       series: [
         {

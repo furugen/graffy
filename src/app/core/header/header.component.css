@@ -1,0 +1,36 @@
+.header-area {
+  top: 10px;
+  padding: 10px;
+  background-color:darkcyan;
+}
+
+.header-content {
+  display: block;
+  width: 970px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+}
+
+.header-logo {
+
+}
+
+.header-description {
+    margin-left: 70px;
+    margin-top: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+}
+
+.header-login {
+    right: 0;
+    padding: 5px 5px 5px 10px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}

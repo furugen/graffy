@@ -1,0 +1,13 @@
+.chart-list {
+  width: 200px;
+  height: 170px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.dataChart {
+}
+
+.selectChart {
+  background-color: lightcoral;
+}

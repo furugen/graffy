@@ -1,33 +1,47 @@
+<div class="top-area">
+  <div>
+      あなたのサイトにグラフで彩りを
+      <Br> 3 Stepからお試し頂けます。
+      <br>
+    <button>サンプルを見てみる</button>
+  </div>
+</div>
+
 <div class="container">
 
 
-  <h3>①グラフを選びましょう</h3>
-  <app-chart-list></app-chart-list>
+
+　<h2>3Step から試しましょう</h2>
+  <h3>①まずはグラフを選びましょう</h3>
+  <p>詳細設定では、さらに数十以上のグラフを選択できます。</p>
+  <app-chart-list (selectChangedEvent)="onChartSelected($event)"></app-chart-list>
 
   <h3>②簡単な設定をしましょう</h3>
 <igx-input-group>
-  <input igxInput name="fullName" type="text" />
-  <label igxLabel for="fullName">グラフ タイトル</label>
+  <input igxInput type="text" [(ngModel)]="chartSetting.title"   />
+  <label igxLabel >グラフ タイトル</label>
 </igx-input-group>
 
 <igx-input-group>
-  <input igxInput name="virtucalTitle" type="text" />
-  <label igxLabel for="virtucalTitle">縦軸のラベル名</label>
+  <input igxInput type="text" [(ngModel)]="chartSetting.yLabel"/>
+  <label igxLabel >縦軸のラベル名</label>
 </igx-input-group>
 
 <igx-input-group>
-  <input igxInput name="horizonTitle" type="text" />
-  <label igxLabel for="horizonTitle">横軸のラベル名</label>
+  <input igxInput  type="text" [(ngModel)]="chartSetting.xLabel" />
+  <label igxLabel >横軸のラベル名</label>
 </igx-input-group>
 
   <h3>③あなたのサイトに表示しましょう</h3>
   <p>下記のURLをあなたのサイトの表示したい場所に記載しましょう。</p>
   <div>
-     https://www.google.co.jp/search?q=html5+%E5%80%8D%E7%8E%87&oq=html5+%E5%80%8D%E7%8E%87&aqs=chrome..69i57j0.12121j0j7&sourceid=chrome&ie=UTF-8
+     <textarea  rows="4" cols="100">
+{{scriptText}}
+  </textarea>
   </div>
 
   <h3>表示ができたらカスタマイズを！</h3>
-  <p>あなたのサイトにグラフの表示は出来ましたか？ さっそくグラフのデータの設定などをカスタマイズしていきましょう！ わからない点があれば、こちらからお気軽にお問い合わせください。
+  <p>あなたのサイトにグラフの表示は出来ましたか？ さっそくデータの設定などをカスタマイズしていきましょう！ わからない点があれば、こちらからお気軽にお問い合わせください。
   </p>
 
     <button igxButton="raised" igxRipple="white" routerLink="/setting">より詳細な設定を！</button>

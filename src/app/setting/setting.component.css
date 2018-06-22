@@ -1,0 +1,6 @@
+.previewFloating {
+  top: 200px;
+  right: 100px;
+  position: fixed;
+  z-index: 100;
+}

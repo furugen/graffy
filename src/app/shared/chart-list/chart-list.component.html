@@ -2,7 +2,8 @@
 
 
 <div class="row">
-  <div class="col-md-3" *ngFor="let chart of charts">
+  <div *ngFor="let chart of charts" class="chart-list" (click)="onSelect(chart)"
+   [class.selectChart]="chart === selectChart">
     <igx-card>
       <igx-card-content>
         <ig-data-chart [(options)]="chart.chartOptions" class="dataChart"></ig-data-chart>

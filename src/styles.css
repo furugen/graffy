@@ -2,4 +2,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 /*@import "~igniteui-js-blocks/zero-blocks.css";*/
 @import "~igniteui-angular/styles/igniteui-angular.css";
-body { padding-top: 70px; }
+body {
+    background: #C6F1E7;
+}

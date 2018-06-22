@@ -1,3 +1,57 @@
-<p>
-  setting works!
-</p>
+<div class="container">
+  <h1>詳細設定</h1>
+  <h3>チャートタイプ</h3>
+  <p>
+    チャートタイプを変更できます。
+  </p>
+  <app-chart-list></app-chart-list>
+
+  <h3>データ設定</h3>
+  <igx-radio name="chartDataSource" value="api">APIから取得する</igx-radio>
+  <igx-input-group>
+    <input igxInput name="fullName" type="text"  />
+    <label igxLabel for="fullName">API Url</label>
+  </igx-input-group>
+  <br>
+  <div>
+    <textarea rows="4" cols="100" [(ngModel)]="jsonDataStr" >[{ "CountryName" : "Jas1"},{ "CountryName" : "Jas"}]</textarea>
+  </div>
+  <button (click)="refJsonData()">反映</button>
+  <br>
+  <igx-radio name="chartDataSource" value="data">データを作成する</igx-radio><br>
+  <p>
+    Excelからデータ取込もできます。
+    <ig-upload></ig-upload>
+  </p>
+  <igx-grid [data]="jsonData" [autoGenerate]="true"  >
+  </igx-grid>
+  <h3>チャート設定</h3>
+  縦軸(Y軸)
+  <br>
+  <ig-combo></ig-combo><br>
+  横軸(X軸)
+  <br>
+  <ig-combo></ig-combo>
+
+  <h3>ラベル設定</h3>
+
+
+  <h3>レイアウト設定</h3>
+
+  <h3>設置URL</h3>
+  <igx-input-group>
+    <input igxInput name="settingURL" type="text" />
+    <label igxLabel for="settingURL">設置URL</label>
+  </igx-input-group>
+
+  <h3>貼り付け用URL</h3>
+  <div>
+    <textarea rows="4" cols="100">
+    </textarea>
+  </div>
+
+  </div>
+<div style="height:1000px;width:100px;" class="previewFloating">
+
+  <ig-data-chart [(options)]="chartOptions"  class="dataChart"></ig-data-chart>
+</div>

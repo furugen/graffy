@@ -4,15 +4,27 @@ import { RouterModule } from "@angular/router";
 
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
-import { IgxInputGroupModule, IgxButtonModule } from "igniteui-angular/main";
+import { IgxInputGroupModule, IgxButtonModule, IgxGridModule, IgxRadioModule } from "igniteui-angular/main";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, IgxInputGroupModule, IgxButtonModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    IgxInputGroupModule,
+    IgxButtonModule,
+    IgxGridModule,
+    IgxRadioModule,
+    FormsModule
+  ],
   exports: [
     HeaderComponent,
     FooterComponent,
     IgxInputGroupModule,
-    IgxButtonModule
+    IgxButtonModule,
+    IgxGridModule,
+    IgxRadioModule,
+    FormsModule
   ],
   declarations: [HeaderComponent, FooterComponent]
 })
