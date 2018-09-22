@@ -10,23 +10,17 @@ import {
   IgniteUIModule
 } from "igniteui-angular-wrappers";
 
-import { IgxCardModule } from "igniteui-angular/main";
+import { IgxCardModule } from "igniteui-angular";
 
 @NgModule({
   imports: [
     CommonModule,
     IgxCardModule,
-    IgSpreadsheetComponent,
-    IgGridComponent,
-    IgDataChartComponent,
     IgniteUIModule
   ],
   exports: [
     ChartListComponent,
     IgxCardModule,
-    IgSpreadsheetComponent,
-    IgGridComponent,
-    IgDataChartComponent,
     IgniteUIModule
   ],
   declarations: [ChartListComponent]
