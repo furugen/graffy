@@ -8,14 +8,12 @@ import { SharedModule } from "./shared/shared.module";
 import { AppComponent } from "./app.component";
 import { TopComponent } from "./top/top.component";
 import { SettingComponent } from "./setting/setting.component";
-import { SamplesComponent } from "./samples/samples.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
-    SettingComponent,
-    SamplesComponent
+    SettingComponent
   ],
   imports: [BrowserModule, AppRoutingModule, CoreModule, SharedModule],
   providers: [],
