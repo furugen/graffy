@@ -21,10 +21,15 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@infragistics/ignite-ui-full/ja/css/themes/infragistics/infragistics.theme.css",
+              "node_modules/@infragistics/ignite-ui-full/ja/css/structure/infragistics.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/@infragistics/ignite-ui-full/ja/js/infragistics.core.js",
+              "node_modules/@infragistics/ignite-ui-full/ja/js/infragistics.dv.js",
+              "node_modules/@infragistics/ignite-ui-full/ja/js/infragistics.lob.js"
             ]
           },
           "configurations": {
